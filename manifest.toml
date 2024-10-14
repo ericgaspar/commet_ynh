@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "commet"
 name = "Commet"
-description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
-description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+description.en = "Web client for Matrix"
+description.fr = "Client web pour Matrix"
 
 version = "0.2.1~ynh1"
 
@@ -13,8 +13,8 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = " AGPL-3.0"
-website = "https://example.com"
-demo = "https://demo.example.com"
+website = "https://commet.chat/"
+demo = "https://app.commet.chat/"
 admindoc = "https://yunohost.org/packaging_apps"
 userdoc = "https://yunohost.org/apps"
 code = "https://github.com/commetchat/commet"
@@ -42,10 +42,12 @@ ram.runtime = "50M"
     default = "visitors"
 
 [resources]
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
 
     [resources.sources]
+
+    [install.path]
+    type = "path"
+    default = "/commet"
 
     [resources.sources.main]
     url = "https://github.com/commetchat/commet/releases/download/v0.2.1/commet-web.tar.gz"
